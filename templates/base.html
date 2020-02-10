@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/title-img.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Riders Home</title>
+    <title>Document</title>
+</head>
+<body>
+        <header>
+                <!-- navbar -->
+                <nav class="navbar navbar-expand-lg fixed-top nav-menu">
+                  <a  class="navbar-brand text-light "href="../../"><span class="h2 font-weight-bold">Bike</span><span class="h1">Bizz..</span></a>
+                  <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
+                    <div class="bg-light line1"></div>
+                    <div class="bg-light line2"></div>
+                    <div class="bg-light line3"></div>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="myNavbar">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a  class="nav-link m-2 menu-item" href="../../">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link m-2 menu-item"href="../../about/">About</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a  class="nav-link m-2 menu-item" href="../../gallery/" >Gallery</a>
+                      </li>
+
+                        <li class="nav-item">
+                        <a  class="nav-link m-2 menu-item" href="../../customers/">Customers</a>
+                      </li>
+
+                       {% if user.is_authenticated %}
+                        {{ request.user }}
+                       <li class="nav-item">
+                        <a  class="nav-link m-2 menu-item" href="../../products/">Products</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link m-2 menu-item" href="../../exchange/">Exchange</a>
+                      </li>
+                        <li class="nav-item">
+                        <a  class="nav-link m-2 menu-item" href="../../review/">Reviews</a>
+                      </li>
+                       <li class="nav-item">
+                        <a class="nav-link m-2 menu-item bg-primary d-inline-block" href="/user/logout">Logout</a>
+                       </li>
+                       {% else %}
+                       <li class="nav-item">
+                        <a class="nav-link m-2 menu-item bg-primary d-inline-block" href="/user/register">Register</a>
+                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link m-2 menu-item bg-primary d-inline-block"href="/user/login">Login</a>
+                      </li>
+                       {% endif %}
+                    </ul>
+                  </div>
+                </nav>
+                <!-- end of navbar -->
+
+                <!-- banner -->
+                <div class="text-light text-md-right text-center banner">
+                  <h1 class="display-4 banner-heading">Welcome to <span>Bike</span><span class="display-3">Bizz..</span></h1>
+                  <p class="lead banner-par">Feel the thrill with the power of dreams</p>
+
+                </div>
+
+                <!-- end of banner -->
+        </header>
+              <!-- end of header -->
+{% block content %}
+
+{% endblock %}
+ <!-- footer -->
+  <footer class="bg-dark px-5">
+    <div class="container-fluid">
+      <div class="row text-light py-4">
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">About Us</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a  class="footer-link" href="../about/">Our Team</a>
+            </li>
+            <li>
+              <a class="footer-link" href="../about/">Our Mission</a>
+            </li>
+            <li>
+              <a  class="footer-link"href="../about/">Our company</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h5 class="pb-3">Visit Us</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a  class="footer-link" href="../">Home</a>
+            </li>
+            <li>
+              <a  class="footer-link"href="../products/">Products</a>
+            </li>
+            <li>
+              <a class="footer-link" href="../gallery/">Gallery</a>
+            </li>
+            <li>
+              <a class="footer-link" href="../exchange/">Exchange</a>
+            </li>
+            <li>
+              <a class="footer-link" href="../reviews/">Reviews</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h5 class="pb-3">Need Help?</h5>
+          <ul class="list-unstyled">
+            <li>
+              <p>Phone.No:9806581591</p>
+            </li>
+            <li>
+              <p>Email:BBZ@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">Stay Connected</h5>
+          <p class="small"> Feel free to stay in touch with us.</p>
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Email Address">
+              <div class="input-group-append" href="../register">
+                <button type="button" class="btn bg-danger text-white text-uppercase font-weight-bold" >Sign Up</button>
+              </div>
+            </div>
+          </form>
+          <ul class="list-inline">
+            <li class="list-inline-item"><i class="fab fa-facebook-square fa-2x text-primary"></i></li>
+            <li class="list-inline-item"><i class="fab fa-google-plus fa-2x text-danger"></i></li>
+            <li class="list-inline-item"><i class="fab fa-instagram fa-2x text-danger"></i></li>
+            <li class="list-inline-item"><i class="fab fa-twitter fa-2x text-info"></i></li>
+            <li class="list-inline-item"><i class="fab fa-youtube fa-2x text-danger"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center text-light border-top pt-3">
+          <p>&copy; 2018 Copyright, All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end of footer -->
+
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script src="{% static 'javascript/script.js' %}"></script>
+</body>
+</html>

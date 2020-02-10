@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- gallery -->
+  <section class="py-5">
+    <div class="container-fluid">
+      <!-- title -->
+      <div class="row text-muted text-center">
+        <div class="col m-4">
+          <h1 class="display-4 mb-4">Gallery</h1>
+          <div class="underline-dark mb-4"></div>
+          <p class="lead">Explore our Gallery</p>
+        </div>
+      </div>
+      <!-- end of title -->
+      <ul class="list-inline text-center text-uppercase font-weight-bold my-4">
+        <li class="list-inline-item gallery-list-item active-item" data-filter="all">All<span class="mx-md-5 mx-3 text-muted">/</span>
+        </li>
+        <li class="list-inline-item gallery-list-item" data-filter="new">New<span class="mx-md-5 mx-3 text-muted">/</span>
+        </li>
+        <li class="list-inline-item gallery-list-item" data-filter="high">HighPrice<span class="mx-md-5 mx-3 text-muted">/</span>
+        </li>
+        <li class="list-inline-item gallery-list-item" data-filter="low">LowPrice
+        </li>
+      </ul>
+      <div class="container-fluid">
+        <div class="d-flex flex-wrap justify-content-center">
+          <div class="filter new"><img src="{% static 'images/gallery1.jpeg' %}" width="300"></div>
+          <div class="filter high"><img src="{% static 'images/gallery2.jpeg' %}" width="300"></div>
+          <div class="filter low"><img src="{% static 'images/gallery3.jpeg' %}" width="300"></div>
+          <div class="filter new"><img src="{% static 'images/gallery4.jpeg' %}" width="300"></div>
+          <div class="filter low"><img src="{% static 'images/gallery5.jpeg' %}" width="300"></div>
+          <div class="filter high"><img src="{% static 'images/gallery6.jpeg' %}" width="300"></div>
+          <div class="filter low"><img src="{% static 'images/gallery7.jpeg' %}" width="300"></div>
+          <div class="filter high"><img src="{% static 'images/gallery8.jpeg' %}" width="300"></div>
+          <div class="filter new"><img src="{% static 'images/gallery9.jpeg' %}" width="300"></div>
+          <div class="filter low"><img src="{% static 'images/gallery10.jpeg' %}" width="300"></div>
+          <div class="filter high"><img src="{% static 'images/gallery11.jpeg' %}" width="300"></div>
+          <div class="filter low"><img src="{% static 'images/gallery12.jpeg' %}" width="300"></div>
+          <div class="filter new"><img src="{% static 'images/gallery13.jpeg' %}" width="300"></div>
+          <div class="filter high"><img src="{% static 'images/gallery14.jpeg' %}" width="300"></div>
+          <div class="filter new"><img src="{% static 'images/gallery15.jpeg' %}" width="300"></div>
+          <div class="filter low"><img src="{% static 'images/gallery16.jpeg' %}" width="300"></div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of gallery -->
+{% endblock %}
